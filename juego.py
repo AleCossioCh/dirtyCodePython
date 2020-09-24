@@ -70,10 +70,7 @@ while True:
         for i in range(len(palabraSecreta)):
             if palabraSecreta[i] not in letrasCorrectas:
                 todas = False
-                return True
-            else:
-                return False
-       
+                break
         if todas:
             print('¡Sí! ¡La palabra secreta es "' +
                   palabraSecreta + '"! ¡Has ganado!')
