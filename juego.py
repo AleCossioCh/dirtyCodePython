@@ -17,10 +17,10 @@ while True:
 
     espacios = '_' * len(palabra)
     for i in range(len(palabra)):
-        if palabra[i] in correctas:
+if palabra[i] in correctas:
 
-            espacios = espacios[:i] + \
-                palabra[i] + espacios[i+1:]
+    espacios = espacios[:i] + \
+        palabra[i] + espacios[i+1:]
 
     for letra in espacios:
         print(letra, end=' ')
@@ -30,12 +30,12 @@ while True:
         print('Adivina una letra.')
         intento = input()
         intento = intento.lower()
-        if len(intento) != 1:
-            print('Por favor, introduce una letra.')
+                if len(intento) != 1:
+                    print('Por favor, introduce una letra.')
         elif intento in correctas or intento in incorrectas:
             print('Ya has probado esa letra. Elige otra.')
-        elif intento not in 'abcdefghijklmnñopqrstuvwxyz':
-            print('Por favor ingresa una LETRA.')
+                elif intento not in 'abcdefghijklmnñopqrstuvwxyz':
+                    print('Por favor ingresa una LETRA.')
         else:
             break
 
@@ -60,11 +60,11 @@ while True:
 
     if terminado:
         print('¿Quieres jugar de nuevo? (sí o no)')
-        if input().lower().startswith('s'):
-            incorrectas = ''
-            correctas = ''
-            terminado = False
-            indice = random.randint(0, len(words) - 1)
-            palabra = words[indice]
-        else:
-            break
+if input().lower().startswith('s'):
+    incorrectas = ''
+    correctas = ''
+    terminado = False
+    indice = random.randint(0, len(words) - 1)
+    palabra = words[indice]
+else:
+    break
